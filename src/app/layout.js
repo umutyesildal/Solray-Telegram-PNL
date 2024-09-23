@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://https://solray-telegram-pnl.vercel.app" />
+        <meta property="og:url" content="https://solray-telegram-pnl.vercel.app" />
         <meta property="og:title" content="Solray PnL Calculator" />
         <meta
           property="og:description"
@@ -38,11 +38,11 @@ export default function RootLayout({ children }) {
         />
         <meta
           property="og:image"
-          content="https://https://solray-telegram-pnl.vercel.app/images/solray-pnl-calculator.png"
+          content="https://solray-telegram-pnl.vercel.app/solray-pnl-calculator.png"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://yourdomain.com/" />
+        <meta property="twitter:url" content="https://solray-telegram-pnl.vercel.app/" />
         <meta property="twitter:title" content="Solray PnL Calculator" />
         <meta
           property="twitter:description"
@@ -50,7 +50,7 @@ export default function RootLayout({ children }) {
         />
         <meta
           property="twitter:image"
-          content="https://https://solray-telegram-pnl.vercel.app/images/solray-pnl-calculator.png"
+          content="https://solray-telegram-pnl.vercel.app/solray-pnl-calculator.png"
         />
       </Head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
