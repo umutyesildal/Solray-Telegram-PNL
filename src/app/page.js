@@ -5,7 +5,6 @@ import { Source_Code_Pro } from 'next/font/google';
 import Loader from '../app/components/Loader';
 import UserBox from '../app/components/UserBox';
 import processData from '../app/utils/processData';
-import { Head } from 'next/head';
 const sourceCodePro = Source_Code_Pro({
   subsets: ['latin'],
   weight: ['400', '700'],
@@ -107,38 +106,6 @@ export default function Home() {
 
 
   return (
-    <div>       <Head>
-    <title>Solray PnL Calculator</title>
-    <meta name="title" content="Solray PnL Calculator" />
-    <meta
-      name="description"
-      content="Calculate and analyze PnL from Solray message exports. Process, visualize, and share your Solray trading performance easily."
-    />
-
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://solray-telegram-pnl.vercel.app" />
-    <meta property="og:title" content="Solray PnL Calculator" />
-    <meta
-      property="og:description"
-      content="Calculate and analyze PnL from Solray message exports. Process, visualize, and share your Solray trading performance easily."
-    />
-    <meta
-      property="og:image"
-      content="https://solray-telegram-pnl.vercel.app/solray-pnl-calculator.png"
-    />
-
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://solray-telegram-pnl.vercel.app/" />
-    <meta property="twitter:title" content="Solray PnL Calculator" />
-    <meta
-      property="twitter:description"
-      content="Calculate and analyze PnL from Solray message exports. Process, visualize, and share your Solray trading performance easily."
-    />
-    <meta
-      property="twitter:image"
-      content="https://solray-telegram-pnl.vercel.app/solray-pnl-calculator.png"
-    />
-  </Head>
     <div className={`container ${sourceCodePro.className}`}>
       <h1>Solray PnL Calculator</h1>
 
@@ -194,11 +161,7 @@ export default function Home() {
             </div>
           )}
         </div>
-        
       )}
-
-      </div>
-
       <style jsx>{`
         .container {
           text-align: center;

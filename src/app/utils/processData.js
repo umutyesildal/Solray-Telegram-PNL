@@ -35,17 +35,27 @@ export default async function processData(jsonData, setProcessingStep, console) 
   
   function filterSellMessages(messages) {
     return messages.filter((message) => {
-      // Check if the message text contains "SELL"
+      // Ensure message.text exists and is an array
+      if (!Array.isArray(message.text) || message.text.length === 0) {
+        console.warn('Ignored message due to invalid or empty text:', message);
+        return false; // Ignore this message
+      }
+  
+      // Log the message text for debugging
+      console.log('message.text:', message.text);
+  
+      // Check if any part of the text contains "SELL" (case-insensitive)
       return message.text.some((textItem) => {
         if (typeof textItem === 'string') {
-          return textItem.includes('SELL');
+          return textItem.toLowerCase().includes('sell');
         } else if (textItem.type === 'text_link' || textItem.type === 'bold') {
-          return textItem.text.includes('SELL');
+          return textItem.text.toLowerCase().includes('sell');
         }
         return false;
       });
     });
   }
+  
   
   function extractDataFromMessages(messages) {
     const excludedTokens = {
