@@ -372,7 +372,7 @@ async function sendDataToDiscord(userDataArray) {
   
     //  console.log('Data file sent to Discord webhook successfully.');
     } catch (error) {
-    //  console.error('Error sending data to Discord:', error);
+    console.error(error);
     }
   }
   
