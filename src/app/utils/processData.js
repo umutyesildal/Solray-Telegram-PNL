@@ -124,7 +124,7 @@ export default async function processData(jsonData, setProcessingStep, console) 
       }
   
       // User Name
-      if (typeof item === 'object' && item.type === 'bold' && !userName) {
+      if (typeof item === 'object' && item.type === 'text_link' && item.href.includes('https://solscan.io/account/')) {
         userName = textContent;
       }
   
