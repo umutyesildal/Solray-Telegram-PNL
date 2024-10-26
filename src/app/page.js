@@ -108,7 +108,6 @@ export default function Home() {
   return (
     <div className={`container ${sourceCodePro.className}`}>
       <h1>Solray PnL Calculator</h1>
-
       {!isDataParsed ? (
         <>
           {processingStep ? (
@@ -137,6 +136,9 @@ export default function Home() {
               {error && <p className="error">{error}</p>}
             </>
           )}
+
+          <a href='https://x.com/yesilNFT/status/1838177789003882955'> You don't know how to get your history? Check my tweet! </a>
+
         </>
       ) : (
         <div className={`new-view ${sourceCodePro.className}`}>
@@ -169,10 +171,17 @@ export default function Home() {
           color: white;
           min-height: 100vh;
           padding: 20px;
+          display: flex;
+          flex-direction: column;
         }
 
         h1 {
           margin-bottom: 40px;
+        }
+
+        a{
+          color: yellow;
+          padding-top: 20px;
         }
         .dropzone {
           border: 2px dashed yellow;
